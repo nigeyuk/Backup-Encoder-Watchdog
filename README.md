@@ -1,0 +1,2 @@
+# Backup-Encoder-Watchdog
+ The Backup Encoder Watchdog is a Python script designed to monitor critical parameters of your primary encoder server and, in the event of a failure, automatically bring up a backup encoder server using AWS CLI. The script checks multiple metrics, including Icecast source status, Liquidsoap CPU usage, the number of HLS segments, and the freshness of .ts files in the HLS directory.
