@@ -1,0 +1,15 @@
+[Unit]
+Description=Watchdog Monitoring Service
+After=network.target
+
+[Service]
+Type=simple
+User=nigel
+Group=nigel
+ExecStart=/usr/bin/python3 /path/to/backupEncoderWatchdog.py
+Restart=always
+RestartSec=30
+WorkingDirectory=/home/nigel/scripts/backupEncoder
+
+[Install]
+WantedBy=multi-user.target
