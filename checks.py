@@ -19,9 +19,9 @@ logger = logging.getLogger(__name__)
 sources_zero_count = 0
 cpu_low_count = 0
 hls_old_file_count = 0
-hls_ts_file_count = 0  # Current number of .ts files
+hls_ts_file_count = 0
 ts_file_count_failures = 0
-liquidsoap_pid = None  # Variable to store the Liquidsoap PID
+liquidsoap_pid = None
 
 def get_liquidsoap_pid():
     """Retrieve the PID of the liquidsoap process."""
@@ -129,7 +129,6 @@ def check_ts_file_count():
     try:
         ts_files = list(Path(HLS_DIRECTORY).glob('*.ts'))
 
-        # Update the global variable with the current number of .ts files
         hls_ts_file_count = len(ts_files)
 
         if hls_ts_file_count > MAX_TS_FILES:
@@ -160,7 +159,6 @@ def check_hls_directory():
         old_files = 0
         ts_files = list(Path(HLS_DIRECTORY).glob('*.ts'))
 
-        # Proceed to check for old files
         for file in ts_files:
             if file.name in EXCLUDE_FILES:
                 logger.info(f"Skipping excluded file: {file.name}")
