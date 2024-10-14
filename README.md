@@ -168,7 +168,7 @@ The script send the following types of notifications to Discord:
 **While this script has been made public, it has only been tested under very specific conditions, it may not behave in the way you would like 
 without some necessary changes.**
 
-Contributing
+# Contributing
 Feel free to submit issues or pull requests. For major changes, please open an issue to discuss your proposed changes.
 
 License
